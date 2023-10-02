@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <link rel="icon"type="image/x.icon" href="assets/media/icons/favicon.ico"/>
+        <title>Register Now</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Register Now">
+        <meta name="keywords" content="Register Now">
+        <script src="https://kit.fontawesome.com/1153190008.js" crossorigin="anonymous"></script>
+        <script src="assets/scripts/formValidation.js"></script>
+        <style>
+            #FileErr,#pageErr {
+            display: none;
+            }
+            input[type=file] {
+            font-size: 16px;
+            width: 244px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            }
+            input[type=file]::file-selector-button {
+                color: #144db6;
+                width: 132px;
+                font-size: 17px;
+                background: #f0f2f5;
+                border-radius: 13px;
+                border: #144db6 solid 1px;
+                height: 28px;
+            }
+            .DisplayBadge, #CountErr, #FileErr {
+            /* white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; */
+            /* margin-left: 10px; */
+            display: none;
+            }
+            body{
+                background-color: #f0f2f5;
+            }
+            .form1{
+                border: 3px rgb(165, 176, 186) groove;
+                box-shadow: 2px 2px 2px 2px #c4d5f5;
+                border-radius:15px ;
+
+                width: 40%;
+                margin: auto;
+                text-align: center;
+                background-color: white;
+            }
+            #submitBt{
+                border: 2px solid #144db6;
+                border-radius:15px ;
+                background-color: #144db6;
+                box-shadow: 2px 2px 2px 2px #a4b9e0;
+                color: white;
+            }
+            h1{
+                text-align: center;
+                text-shadow: #a7bccb 5px 5px 5px;
+            }
+            input{
+                width: 75%;
+                margin-bottom: 15px;
+                /* border-radius:7px; */
+                /* font-size: 16px; */
+            }
+            footer{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Register Now</h1>
+        <form class="form1">
+            <img src="assets/media/images/D.png" alt="LOGO"><br>
+            <p>You are the world and the world is you</p>
+            <i class="fa-solid fa-user"></i>
+            <label for="FirstName">First Name :</label>
+            <input id="FirstName" type="text" onkeyup="CheckName(this)" placeholder="Write your First Name" required autofocus autocomplete="off" />
+            <br /><br />
+            <i class="fa-solid fa-user"></i>
+            <label for="SecondName">Second Name :</label>
+            <input id="SecondName" type="text" onkeyup="CheckName(this)" placeholder="Write your Second Name" required autocomplete="off" />
+            <br /><br />
+            <i class="fa-solid fa-envelope"></i>
+            <label for="email">Email :</label>
+            <input type="email" id="email" onkeyup="CheckEmail(this)" placeholder="Write your Email" required>
+            <br /><br />
+            <i class="fa-solid fa-lock"></i>
+            <label for="Pass">Password :</label>
+            <input id="Pass" type="password" onkeyup="CheckPassword(this)" placeholder="Write Password" required />
+            <span id="StrengthDisp" class="DisplayBadge">Example</span>
+            <br /><br />
+            <i class="fa-solid fa-hand-pointer"></i>
+            <label for="CounterTxt">Count: </label>
+            <input id="CounterTxt" type="number" onchange="CheckCounter(this)" onkeyup="CheckCounter(this)" placeholder="Enter number between 1 and 20" required />
+            <span id="CountErr">Example</span>
+            <br /><br />
+            <i class="fa-solid fa-phone"></i>
+            <label for="Pass">Phone :</label>
+            <input id="phone" type="text" onkeyup="CheckPhone(this)" placeholder="Write Your Phone[+xx-xxx-xxx-xxxx]" required />
+            <br /><br />
+            <i class="fa-solid fa-file-import"></i>
+            <label for="FileUploader">Select a file: </label>
+            <!-- multiple -->
+            <input id="FileUploader"  onchange="CheckFileSize(this);" type="file" accept=".pdf,.png,.jpg,.jpeg,.gif,.docx, .xlsx" />
+            <span id="FileErr"></span>
+            <input type="submit" id="submitBt" onclick="submitValid()" value="Register Now" />
+            <p id="clk"></p>
+            <input type="button" value="stopClock" onclick="stopClock ()">
+            <br>
+            <p id="pageErr"></p>
+            <p>Already have an account?<a href="Sign_In.html" target="_blank">Login</a></p>
+        </form>
+        <footer>
+            &#169; Copyright 2022 by <span>Doaa Ossama</span>
+        </footer>
+    </body>
+</html>

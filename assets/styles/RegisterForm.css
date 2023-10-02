@@ -1,0 +1,32 @@
+body{
+    background-color: #f0f2f5;
+}
+.form1{
+    border: 3px rgb(165, 176, 186) groove;
+    width: 30%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    
+}
+label{
+    text-align: right;
+}
+#b1{
+    border: 2px solid #3690d5;
+    background-color: #3690d5;
+    color: white;
+}
+h1{
+    text-align: center;
+    text-shadow: #a7bccb 5px 5px 5px;
+}
+input{
+    width: 90%;
+    border-left:0 ;
+    border-top: 0;
+    border-right:0 ;
+    margin-bottom: 15px;
+}
+
