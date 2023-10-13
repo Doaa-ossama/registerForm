@@ -1,19 +1,19 @@
 /*....................styling.....................*/
 function ChangeSpanStyle(Element, Display, text, Color) {
-    // debugger;
+    
     Element.style.display = Display;
     Element.textContent = text;
     Element.style.color = Color;
 }
 function ChangeElementStyle(Element, Color) {
-    // debugger;
+    
     Element.style.outline = "none";
     Element.style.border = "3px solid " + Color;
 }
 /*...................CheckFileSize.......................*/
 var submitFileSize=""
 function CheckFileSize(file) {
-    // debugger;
+    
     var FileSize = file.files[0].size
     FileSize = FileSize / 1024 / 1024;   // size in MB
     var FileErr = document.getElementById('FileErr');
@@ -41,7 +41,7 @@ var submitPassword=""
 var strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
 var mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
 function CheckPassword(passElement) {
-    // debugger;
+    
     //var PassMsg = document.getElementById('StrengthDisp');
     var pass = passElement.value;
     if (pass != "" ||pass!="undefined"){
@@ -78,7 +78,7 @@ function CheckName(nameElement){
 var submitEmail=""
 var emailValid = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
 function CheckEmail(emailElement){
-    // debugger;
+    
     var email = emailElement.value;
     if (email != ""){
         if(emailValid.test(email)){
@@ -135,7 +135,7 @@ debugger
 // });}
 // }
 function submitValid () {
-    // debugger
+    
 if (submitCount==false||submitPhone==false||submitEmail==false||submitName==false||submitPassword==false||submitFileSize==false){
     event.preventDefault()
     var pageErr = document.getElementById('pageErr');
